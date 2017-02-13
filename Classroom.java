@@ -7,4 +7,8 @@ public class Classroom {
     this.students = new ArrayList<Person>();
   }
 
+  public int count(){
+    return students.size();
+  }
+
 }
