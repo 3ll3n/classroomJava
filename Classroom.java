@@ -1,14 +1,17 @@
 import java.util.ArrayList;
 
-public class Classroom {
+public class Classroom{
   private ArrayList<Person> students;
 
-  public Classroom (){
+  public Classroom(){
     this.students = new ArrayList<Person>();
   }
 
-  public int count(){
+  public int studentCount(){
     return students.size();
   }
 
+  public void addStudent(Person person){
+    students.add(person);
+  }
 }
