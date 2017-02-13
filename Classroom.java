@@ -2,9 +2,11 @@ import java.util.ArrayList;
 
 public class Classroom{
   private ArrayList<Person> students;
+  private int capacity;
 
-  public Classroom(){
+  public Classroom(int capacity){
     this.students = new ArrayList<Person>();
+    this.capacity = capacity;
   }
 
   public int studentCount(){
@@ -17,6 +19,13 @@ public class Classroom{
 
   public boolean isEmpty(){
     return students.isEmpty();
+  }
+
+  public boolean isClassroomFull(){
+    if (studentCount() == this.capacity)
+      return true;
+    else
+      return false;
   }
 
 }

@@ -11,7 +11,7 @@ public class ClassroomTest {
 
   @Before
   public void before(){
-    classroom = new Classroom();
+    classroom = new Classroom(3);
     person = new Person("Eileen");
     layla = new Person("Layla");
     ruby = new Person("Ruby");
@@ -38,6 +38,14 @@ public class ClassroomTest {
   public void confirmNotEmptyClassroom(){
     classroom.addStudent(person);
     assertEquals(false, classroom.isEmpty());
+  }
+
+  @Test
+  public void checkIsClassroomFull(){
+    classroom.addStudent(person);
+    classroom.addStudent(layla);
+    classroom.addStudent(ruby);
+    assertEquals(true, classroom.isClassroomFull());
   }
 
 }
