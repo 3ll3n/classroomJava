@@ -11,6 +11,10 @@ public class Classroom{
     return students.size();
   }
 
+  public boolean isEmpty(){
+    return students.isEmpty();
+  }
+
   public void addStudent(Person person){
     students.add(person);
   }

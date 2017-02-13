@@ -24,6 +24,17 @@ public class ClassroomTest {
   }
 
   @Test
+  public void confirmEmptyClassroom(){
+    assertEquals(true, classroom.isEmpty());
+  }
+
+  @Test
+  public void confirmNotEmptyClassroom(){
+    classroom.addStudent(person);
+    assertEquals(false, classroom.isEmpty());
+  }
+
+  @Test
   public void addStudent(){
     classroom.addStudent(person);
     assertEquals(1, classroom.studentCount());
