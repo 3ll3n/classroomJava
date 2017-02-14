@@ -22,10 +22,13 @@ public class Classroom{
   }
 
   public boolean isClassroomFull(){
-    if (studentCount() == this.capacity)
-      return true;
-    else
-      return false;
+    return (studentCount() >= this.capacity);
+    // if (studentCount() >= this.capacity){
+    //   return true;
+  // }
+    // else{
+    //   return false;
+  // }
   }
 
 }
